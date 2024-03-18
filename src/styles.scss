@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@mixin rounded-element {
+  border-radius: .25rem;
+  margin: 1rem auto 0;
+  padding: 1rem 2rem;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f4f7;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stage {
+  width: 50%;
+  min-width: 360px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.more {
+  @include rounded-element;
+  font: inherit;
+  border: 1px solid #d7dbe0;
+  background-color: #fff;
+  cursor: pointer;
+  display: block;
+
+  &:hover, &:focus {
+    background-color: #ebecf0;
+  }
+}
+
+.error {
+  @include rounded-element;
+  background-color: #FFEBEE;
+  border: 1px solid #E57373;
+  border-radius: .25rem;
+}
+
+.text-center {
+  @include rounded-element;
+  text-align: center;
+}
+

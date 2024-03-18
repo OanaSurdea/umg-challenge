@@ -1,0 +1,21 @@
+<ng-container *ngIf="products$ | async; let products">
+
+  <!-- Items -->
+  <div>
+    <p *ngFor="let product of products.content">
+      {{ product.title | json }}
+    </p>
+  </div>
+
+  <!-- Pagination -->
+  <div class="text-center">Current page: 1</div>
+  <button class="more" (click)="loadMore()" disabled>Load more</button>
+
+</ng-container>
+
+<!-- Loading -->
+<!-- <div>Loading data...</div> -->
+
+<!-- Error -->
+<!-- <div class="error"></div> -->
+
